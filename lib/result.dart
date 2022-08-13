@@ -25,22 +25,32 @@ class _ResultState extends State<Result> {
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Gender: ${widget.isMale ? "Male" : "Female"}",
-              style: txtStyle,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[400],
+              borderRadius: BorderRadius.circular(25),
             ),
-            Text(
-              "Age: ${widget.age}",
-              style: txtStyle,
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Gender: ${widget.isMale ? "Male" : "Female"}",
+                  style: txtStyle,
+                ),
+                Text(
+                  "Age: ${widget.age}",
+                  style: txtStyle,
+                ),
+                Text(
+                  "Result: ${widget.result}",
+                  style: txtStyle,
+                ),
+              ],
             ),
-            Text(
-              "Result: ${widget.result}",
-              style: txtStyle,
-            ),
-          ],
+          ),
         ),
       ),
     );
